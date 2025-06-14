@@ -3,27 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAME</title>
+    <title>Guess The Number Game</title>
     <style>
-        div{
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
             display: flex;
-            align-items: center;
             justify-content: center;
-            flex-direction: column;
-            height: 50vh;
-            
-            
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffffdd;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"]:focus {
+            border-color: #6a5acd;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a4bb2;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .toohigh{
+            background: linear-gradient(135deg, hsl(0, 91%, 55%), #acb6e5);
+        }
+
+           .toolow{
+             background: linear-gradient(135deg, hsl(233, 100%, 50%), #acb6e5);
+        }
+        .correct{
+                background: linear-gradient(135deg, hsl(113, 98%, 60%), #acb6e5);
+
         }
     </style>
     <script src="P42.js"></script>
 </head>
 <body>
-    <div>
-    <h1>Guess The Number</h1>
-    <input type="number" name="userNumber" id="userNumber" min="1" max="10">
-    <br>
-    <button id="checkButton" onclick="checkNumber()">Check</button>
-    <h4 id="output"></h4>
+    <div class="container">
+        <h1>Guess The Number</h1>
+        <input type="number" name="userNumber" id="userNumber" min="1" max="10" placeholder="Enter a number 1–10">
+        <br>
+        <button id="checkButton" onclick="checkNumber()">Check</button>
+        <h4 id="output"></h4>
     </div>
 </body>
 </html>

@@ -1,2 +1,2 @@
 const favoriteFood = "Masala Dosa"
-favoriteFood = "Normal Dosa"
+console.log(favoriteFood)
